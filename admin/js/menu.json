@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "name": "Beef Burger",
+        "description": "Yummy burger",
+        "price": 13,
+        "image": "../Image/food/burger2.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Deluxe Burger",
+        "description": "Juicy chicken burger with fries",
+        "price": 20,
+        "image": "../Image/food/burger1.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Pasta",
+        "description": "Yummy Pasta",
+        "price": 30,
+        "image": "../Image/food/pasta1.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Pasta",
+        "description": "Yummy Pasta",
+        "price": 30,
+        "image": "../Image/food/pasta1.jpg"
+    }
+]

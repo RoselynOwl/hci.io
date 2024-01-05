@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- jquery access -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- js -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="CSS/browseMenuSideBar.css">
+    <link rel="stylesheet" href="css/notification.css">
+    <link rel="stylesheet" href="css/delivery.css">
+    <link rel="stylesheet" href="css/chat.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <!-- <link href='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css' rel='stylesheet'> -->
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+
+    <style>
+        header {
+            margin-bottom: 20px;
+        }
+    </style>
+
+
+    <!-- Icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Delivery System</title>
+
+
+    <script>
+        $(document).ready(function () {
+            $("#dash1").css("background", "rgba(232, 221, 181, 0.88)");
+            $(".msger").hide();
+            $(".check-record").hide();
+            $(".wallet").hide();
+            $(".progress-container").hide();
+            //side bar
+            $("#dash1").click(function () {
+                $("#dash1").css("background", "rgba(232, 221, 181, 0.88)");
+                $("#dash2").css("background", "none");
+                $("#dash3").css("background", "none");
+                $("#dash4").css("background", "none");
+                $("#dash5").css("background", "none");
+                $("#dash6").css("background", "none");
+                $(".section-50").show();
+                $(".progress-container").hide();
+                $(".check-record").hide();
+                $(".msger").hide();
+                $(".wallet").hide();
+            });
+            $("#dash2").click(function () {
+                $("#dash1").css("background", "none");
+                $("#dash2").css("background", "rgba(232, 221, 181, 0.88)");
+                $("#dash3").css("background", "none");
+                $("#dash4").css("background", "none");
+                $("#dash5").css("background", "none");
+                $("#dash6").css("background", "none");
+                $(".section-50").hide();
+                $(".progress-container").hide();
+                $(".check-record").hide();
+                $(".msger").hide();
+                $(".wallet").hide();
+            });
+            $("#dash3").click(function () {
+                $("#dash1").css("background", "none");
+                $("#dash2").css("background", "none");
+                $("#dash3").css("background", "rgba(232, 221, 181, 0.88)");
+                $("#dash4").css("background", "none");
+                $("#dash5").css("background", "none");
+                $("#dash6").css("background", "none");
+                $(".section-50").hide();
+                $(".progress-container").show();
+                $(".check-record").hide();
+                $(".msger").hide();
+                $(".wallet").hide();
+            });
+            $("#dash4").click(function () {
+                $("#dash1").css("background", "none");
+                $("#dash2").css("background", "none");
+                $("#dash3").css("background", "none");
+                $("#dash4").css("background", "rgba(232, 221, 181, 0.88)");
+                $("#dash5").css("background", "none");
+                $("#dash6").css("background", "none");
+                $(".section-50").hide();
+                $(".progress-container").hide();
+                $(".check-record").show();
+                $(".msger").hide();
+                $(".wallet").hide();
+            });
+            $("#dash5").click(function () {
+                $("#dash1").css("background", "none");
+                $("#dash2").css("background", "none");
+                $("#dash3").css("background", "none");
+                $("#dash4").css("background", "none");
+                $("#dash5").css("background", "rgba(232, 221, 181, 0.88)");
+                $("#dash6").css("background", "none");
+                $(".section-50").hide();
+                $(".progress-container").hide();
+                $(".check-record").hide();
+                $(".msger").show();
+                $(".wallet").hide();
+            });
+            $("#dash6").click(function () {
+                $("#dash1").css("background", "none");
+                $("#dash2").css("background", "none");
+                $("#dash3").css("background", "none");
+                $("#dash4").css("background", "none");
+                $("#dash5").css("background", "none");
+                $("#dash6").css("background", "rgba(232, 221, 181, 0.88)");
+                $(".section-50").hide();
+                $(".progress-container").hide();
+                $(".check-record").hide();
+                $(".msger").hide();
+                $(".wallet").show();
+            });
+
+            //progress list
+            $("#order0").hide();
+            $("#order1").hide();
+            $("#order2").hide();
+            $('.progress-table tbody tr').click(function () {
+                $(".progress").hide();
+                if ($(this).index() == 0) {
+                    $("#order0").show();
+                    $("#order1").hide();
+                    $("#order2").hide();
+                } else if ($(this).index() == 1) {
+                    $("#order0").hide();
+                    $("#order1").show();
+                    $("#order2").hide();
+                } else if ($(this).index() == 2) {
+                    $("#order0").hide();
+                    $("#order1").hide();
+                    $("#order2").show();
+                } else{
+                    $(".progress").show();
+                    $("#order0").hide();
+                    $("#order1").hide();
+                    $("#order2").hide();
+                }
+            });
+
+            $('.order-back').click(function () {
+                $(".progress").show();
+                $("#order0").hide();
+                $("#order1").hide();
+                $("#order2").hide();
+            });
+            $('.CancelBtn0').on('click', function () {
+                var isConfirmed = confirm('Are you sure?');
+                if (isConfirmed) {
+                    $("#order0 #order-status").text("Cancelled");
+                    $("#order0 .changeBtn").hide();
+                    $('.CancelBtn0').hide();
+                    $(".progress-table tbody tr:first-child p.status").text("Cancelled");
+                    $(".progress-table tbody tr:first-child p.status").removeClass("pending").addClass("cancelled");
+                    alert('Order is already cancelled');
+                }
+            });
+            $('.changeBtn0').on('click', function () {
+                var isConfirmed = confirm('Sure?');
+                if (isConfirmed) {
+                    $("#order0 #order-status").text("Completed");
+                    $("#order0 .changeBtn").hide();
+                    $('.CancelBtn0').hide();
+                    $(".progress-table tbody tr:first-child p.status").text("Completed");
+                    $(".progress-table tbody tr:first-child p.status").removeClass("pending").addClass("delivered");
+                }
+            });
+            $('.CancelBtn1').on('click', function () {
+                var isConfirmed = confirm('Are you sure?');
+                if (isConfirmed) {
+                    $("#order1 #order-status").text("Cancelled");
+                    $("#order1 .changeBtn").hide();
+                    $('.CancelBtn1').hide();
+                    $(".progress-table tbody tr:nth-child(2) p.status").text("Cancelled");
+                    $(".progress-table tbody tr:nth-child(2) p.status").removeClass("pending").addClass("cancelled");
+                    alert('Order is already cancelled');
+                }
+            });
+            $('.changeBtn1').on('click', function () {
+                var isConfirmed = confirm('Sure?');
+                if (isConfirmed) {
+                    $("#order1 #order-status").text("Completed");
+                    $("#order1 .changeBtn").hide();
+                    $('.CancelBtn1').hide();
+                    $(".progress-table tbody tr:nth-child(2) p.status").text("Completed");
+                    $(".progress-table tbody tr:nth-child(2) p.status").removeClass("pending").addClass("delivered");
+                }
+            });
+
+            //wallet
+            $(".cr-date-selector").change(function () {
+                var selectedDate = $(this).val();
+                fetch('json/orderRecord.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        const orderListElement = document.getElementById('cr-list');
+                        orderListElement.innerHTML = ""; // Clear existing content
+
+                        // Filter data based on the selected date
+                        const filteredData = data.filter(order => order.date === selectedDate);
+
+                        // Render the filtered data
+                        filteredData.forEach(order => {
+                            const orderDiv = document.createElement('div');
+                            orderDiv.className = 'cr-list-front';
+
+                            const orderDetailDiv = document.createElement('div');
+                            orderDetailDiv.className = 'cr-list-detail';
+
+                            const customerInfo = document.createElement('p');
+                            customerInfo.innerHTML = `<b>${order.customer}</b> <small>${order.date}</small>`;
+                            orderDetailDiv.appendChild(customerInfo);
+
+                            const orderText = document.createElement('p');
+                            orderText.className = 'cr-list-text';
+                            orderText.innerHTML = `<span>${order.storeName}</span><span class="cr-list-price">+ $${order.price}</span>`;
+                            orderDetailDiv.appendChild(orderText);
+
+                            orderDiv.appendChild(orderDetailDiv);
+                            orderListElement.appendChild(orderDiv);
+                        });
+                    })
+                    .catch(error => console.error('Error fetching orderRecord.json:', error));
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <nav class="sidebar">
+        <header onclick="window.location.href='index_delivery.html'">
+            <div class="logo-text">
+                <span class="logo">
+                    <img src="image/logo.png" alt="logo">
+                </span>
+
+                <div class="text header-text">
+                    <span class="name">Yummy Restaurant</span>
+                    <!-- <span class="subname">Menu</span> -->
+                </div>
+            </div>
+            <!-- <i class='bx bx-menu toggle'></i> -->
+        </header>
+
+        <!-- =============================sidebar=============================== -->
+        <div class="menu-bar">
+
+            <div class="menu">
+
+                <ul class="menu-links">
+                    <li class="nav-link" id="dash1">
+                        <a href="#">
+                            <i class='bx bxs-dashboard part'></i>
+                            <span class="text nav-text">Notification</span>
+                        </a>
+                    </li>
+                    <!-- <li class="nav-link" id="dash2">
+                        <a href="#">
+                            <i class='bx bxs-dashboard part'></i>
+                            <span class="text nav-text">Request</span>
+                        </a>
+                    </li> -->
+                    <li class="nav-link" id="dash3">
+                        <a href="#">
+                            <i class='bx bxs-dashboard part'></i>
+                            <span class="text nav-text">Progress</span>
+                        </a>
+                    </li>
+                    <li class="nav-link" id="dash4">
+                        <a href="#">
+                            <i class='bx bxs-dashboard part'></i>
+                            <span class="text nav-text">Record</span>
+                        </a>
+                    </li>
+                    <li class="nav-link" id="dash5">
+                        <a href="#">
+                            <i class='bx bxs-dashboard part'></i>
+                            <span class="text nav-text">Message</span>
+                        </a>
+                    </li>
+                    <li class="nav-link" id="dash6">
+                        <a href="#">
+                            <i class='bx bxs-dashboard part'></i>
+                            <span class="text nav-text">Wallet</span>
+                        </a>
+                    </li>
+                    <!-- <li class="nav-mode">
+                        <a href="#">
+                            <i class='bx bxs-dashboard part' ></i>
+                            <span class="text nav-text">Dash</span>
+                        </a>
+                    </li> -->
+                </ul>
+            </div>
+
+            <div>
+                <div class="profile-details">
+                    <div class="profile-content">
+                        <ion-icon name="person-outline"></ion-icon>
+                        <!-- <img src="image/profile.jpg" alt="profileImg"> -->
+                    </div>
+                    <div class="name-job">
+                        <div class="profile_name">Handsome</div>
+                        <div class="job">Delivery</div>
+                    </div>
+                    <!-- <i class='bx bx-log-out' ></i> -->
+                </div>
+
+                <div class="bottom-logout">
+                    <li>
+                        <a href="../Sign_in_up/login.html">
+                            <i class='bx bx-log-out-circle'></i>
+                            <span class="text nav-text">Logout</span>
+                        </a>
+                    </li>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- =====================Right part============================== -->
+
+    <div class="main">
+
+        <!-- notification -->
+        <section class="section-50">
+            <div class="container">
+                <h2 class="m-b-50 heading-line">Notifications <i class="fa fa-bell text-muted"></i></h2>
+
+                <p></p><br><br>
+
+                <div class="notification-ui_dd-content">
+                    <div class="notification-list notification-list--unread">
+                        <div class="notification-list_content">
+                            <div class="notification-list_img">
+                                <!-- <img src="https://i.imgur.com/zYxDCQT.jpg" alt="user"> -->
+                            </div>
+                            <div class="notification-list_detail">
+                                <p><b>John Doe</b> Yummy Restaurant Manager</p>
+                                <p class="text-muted">Email: "之後將chat room放入黎，區分顧客"</p>
+                                <p class="text-muted"><small>10 mins ago</small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="notification-ui_dd-content">
+                        <div class="notification-list notification-list--unread">
+                            <div class="notification-list_content">
+                                <div class="notification-list_img">
+                                    <!-- <img src="https://i.imgur.com/zYxDCQT.jpg" alt="user"> -->
+                                </div>
+                                <div class="notification-list_detail">
+                                    <p><b>Chan Tai Man</b> Customer</p>
+                                    <p class="text-muted">Sent you a meassage: "😄"</p>
+                                    <p class="text-muted"><small>10 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="notification-ui_dd-content">
+                        <div class="notification-list notification-list--unread">
+                            <div class="notification-list_content">
+                                <div class="notification-list_img">
+                                    <!-- <img src="https://i.imgur.com/zYxDCQT.jpg" alt="user"> -->
+                                </div>
+                                <div class="notification-list_detail">
+                                    <p><b>Jackson Chan</b> Customer</p>
+                                    <p class="text-muted">Sent you a meassage: "How are you? I'm fine thank you."</p>
+                                    <p class="text-muted"><small>2 hours ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="text-center">
+                        <a href="#!" class="dark-link">Load more list</a>
+                    </div> -->
+
+                    <br><br>
+                    <p></p>
+                </div>
+            </div>
+        </section>
+
+        <!------ Progress ------------------------------------------------>
+        <section class="progress-container">
+            <header>
+                <h2>Progress</h2>
+            </header>
+            <div class="progress">
+                <table class="progress-table">
+                    <thead>
+                        <tr>
+                            <th> Customer <span class="icon-arrow">&UpArrow;</span></th>
+                            <th> Location <span class="icon-arrow">&UpArrow;</span></th>
+                            <th> Date Time <span class="icon-arrow">&UpArrow;</span></th>
+                            <th> Status <span class="icon-arrow">&UpArrow;</span></th>
+                            <th> Amount <span class="icon-arrow">&UpArrow;</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> Chan Tai Man</td>
+                            <td> 香港細山青衣路20號</td>
+                            <td>2023-11-29 12:30:05 </td>
+                            <td>
+                                <p class="status pending">Pending</p>
+                            </td>
+                            <td> <strong> $64.99 </strong></td>
+                        </tr>
+                        <tr>
+                            <td>Jackson Chan</td>
+                            <td>香港細山青衣路20號</td>
+                            <td> 2023-11-22 06:03:10</td>
+                            <td>
+                                <p class="status pending">Pending</p>
+                            </td>
+                            <td> <strong>$3000.99</strong> </td>
+                        </tr>
+                        <tr>
+                            <td>Eason Chan</td>
+                            <td> Mayfair Garden </td>
+                            <td> 2023-11-15 09:40:18</td>
+                            <td>
+                                <p class="status pending">Pending</p>
+                            </td>
+                            <td> <strong>$210.40</strong> </td>
+                        </tr>
+                        <tr>
+                            <td>Edison Chan</td>
+                            <td> Mayfair Garden </td>
+                            <td> 2023-11-11 18:55:22</td>
+                            <td>
+                                <p class="status pending">Pending</p>
+                            </td>
+                            <td> <strong>$149.70</strong> </td>
+                        </tr>
+                        <tr>
+                            <td>Anson Chan</td>
+                            <td> Mayfair Garden </td>
+                            <td> 2023-11-08 21:12:45</td>
+                            <td>
+                                <p class="status delivered">Delivered</p>
+                            </td>
+                            <td> <strong>$399.99</strong> </td>
+                        </tr>
+                        <tr>
+                            <td>Jason Chan</td>
+                            <td> Mayfair Garden </td>
+                            <td> 2023-11-05 03:20:50</td>
+                            <td>
+                                <p class="status cancelled">Cancelled</p>
+                            </td>
+                            <td> <strong>$399.99</strong> </td>
+                        </tr>
+                        <tr>
+                            <td>Johnson Chan</td>
+                            <td> Mayfair Garden</td>
+                            <td> 2023-11-03 14:25:30</td>
+                            <td>
+                                <p class="status delivered">Delivered</p>
+                            </td>
+                            <td> <strong>$399.99</strong> </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+
+
+
+        <!-- order list --------------------------------->
+        <div id="order0">
+            <div class="order-details">
+                <div class="item">
+                    <p><strong>Order Time: </strong>2023-11-29 12:30:05</p>
+                    <p><strong>Customer: </strong>Chan Tai Man</p>
+                    <p><strong>Contact No: </strong>+852 6666 8888</p>
+                    <p><strong>Destination: </strong>香港細山青衣路20號</p>
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.295574367266!2d114.10364987477958!3d22.342465679656367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3403f8d2dc85656f%3A0xe52d12c0080581c8!2z6aaZ5riv5bCI5qWt5pWZ6IKy5a246ZmiICjpnZLooaMp!5e0!3m2!1szh-TW!2stw!4v1701522714085!5m2!1szh-TW!2stw"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <p><strong>Items:</strong></p>
+                    <ul>
+                        <li>Burger - $29.99</li>
+                        <li>Pizza - $30.00</li>
+                        <li>Soda - $5.00</li>
+                    </ul>
+                </div>
+
+                <div class="total">
+                    <p><strong>Total Amount:</strong> $64.99</p>
+                </div>
+                <div>
+                    <p><strong>Status: </strong> <span id="order-status">Pending</span>
+                        <button class="changeBtn changeBtn0">Complete</button>
+                    </p>
+                </div>
+                <p><button class="order-back">Back</button>
+                    <button class="CancelBtn CancelBtn0">Cancel Order</button>
+                </p>
+            </div>
+        </div>
+
+        <div id="order1">
+            <div class="order-details">
+                <div class="item">
+                    <p><strong>Order Time: </strong>2023-11-22 06:03:10</p>
+                    <p><strong>Customer: </strong>Jackson Chan</p>
+                    <p><strong>Contact No: </strong>+852 6666 7777</p>
+                    <p><strong>Destination: </strong>香港細山青衣路20號</p>
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.295574367266!2d114.10364987477958!3d22.342465679656367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3403f8d2dc85656f%3A0xe52d12c0080581c8!2z6aaZ5riv5bCI5qWt5pWZ6IKy5a246ZmiICjpnZLooaMp!5e0!3m2!1szh-TW!2stw!4v1701522714085!5m2!1szh-TW!2stw"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <p><strong>Items:</strong></p>
+                    <ul>
+                        <li>Water - $1000.99</li>
+                        <li>Ramen - $2000.00</li>
+                    </ul>
+                </div>
+
+                <div class="total">
+                    <p><strong>Total Amount:</strong> $3000.99</p>
+                </div>
+                <div>
+                    <p><strong>Status: </strong> <span id="order-status">Pending</span>
+                        <button class="changeBtn changeBtn1">Complete</button>
+                    </p>
+                </div>
+                <p><button class="order-back">Back</button>
+                    <button class="CancelBtn CancelBtn1">Cancel Order</button>
+                </p>
+            </div>
+        </div>
+
+        <div id="order2">
+            <div class="order-details">
+                <div class="item">
+                    <p><strong>Order Time: </strong>2023-11-22 06:03:10</p>
+                    <p><strong>Customer: </strong>Jackson Chan</p>
+                    <p><strong>Contact No: </strong>+852 6666 7777</p>
+                    <p><strong>Destination: </strong>香港細山青衣路20號</p>
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.295574367266!2d114.10364987477958!3d22.342465679656367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3403f8d2dc85656f%3A0xe52d12c0080581c8!2z6aaZ5riv5bCI5qWt5pWZ6IKy5a246ZmiICjpnZLooaMp!5e0!3m2!1szh-TW!2stw!4v1701522714085!5m2!1szh-TW!2stw"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <p><strong>Items:</strong></p>
+                    <ul>
+                        <li>Water - $1000.99</li>
+                        <li>Ramen - $2000.00</li>
+                    </ul>
+                </div>
+
+                <div class="total">
+                    <p><strong>Total Amount:</strong> $3000.99</p>
+                </div>
+                <div>
+                    <p><strong>Status: </strong> <span id="order-status">Pending</span>
+                        <button class="changeBtn changeBtn1">Complete</button>
+                    </p>
+                </div>
+                <p><button class="order-back">Back</button>
+                    <button class="CancelBtn CancelBtn1">Cancel Order</button>
+                </p>
+            </div>
+        </div>
+
+
+
+
+        <!-- record ------------------------------------------------------->
+        <section class="check-record">
+            <header class="cr-header">
+                <h2>Record</h2>
+                <br>
+                <!-- <div class="cr-nav">
+                    <button class="cr-nav-btn">All</button>
+                    <button class="cr-nav-btn">Uncompleted</button>
+                    <button class="cr-nav-btn">Completed</button>
+                    <button class="cr-nav-btn">Cancelled</button>
+                    <button class="cr-nav-btn">Refunded</button>
+                </div> -->
+                <div class="cr-date-container">
+                    <input class="cr-date-selector" type="date">
+                    <button class="cr-date-sorting">From: new</button>
+                </div>
+            </header>
+
+            <div class="cr-list" id="cr-list"></div>
+
+            <script>
+                fetch('json/orderRecord.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        const orderListElement = document.getElementById('cr-list');
+
+                        data.forEach(order => {
+                            const orderDiv = document.createElement('div');
+                            orderDiv.className = 'cr-list-front';
+
+                            const orderDetailDiv = document.createElement('div');
+                            orderDetailDiv.className = 'cr-list-detail';
+
+                            const customerInfo = document.createElement('p');
+                            customerInfo.innerHTML = `<b>${order.customer}</b> <small>${order.date}</small>`;
+                            orderDetailDiv.appendChild(customerInfo);
+
+                            const orderText = document.createElement('p');
+                            orderText.className = 'cr-list-text';
+                            orderText.innerHTML = `<span>${order.storeName}</span><span class="cr-list-price">+ $${order.price}</span>`;
+                            orderDetailDiv.appendChild(orderText);
+
+                            orderDiv.appendChild(orderDetailDiv);
+                            orderListElement.appendChild(orderDiv);
+                        });
+                    })
+                    .catch(error => console.error('Error fetching orderRecord.json:', error));
+            </script>
+
+        </section>
+
+        <!-- customer chat ------------------------------------------------>
+        <section class="msger">
+            <h2>Message</h2>
+            <header class="msger-header">
+                <div class="msger-header-title">
+                    <i class="fas fa-comment-alt"></i> Customer -- Chan Tai Man
+                </div>
+                <div class="msger-header-options">
+                    <span><i class="fas fa-cog"></i></span>
+                </div>
+            </header>
+
+            <main class="msger-chat">
+
+                <div class="msg right-msg">
+                    <!-- 自己icon 睇情況再整 -->
+                    <!-- <div
+                        class="msg-img"
+                        style="background-image: url()"
+                        ></div> -->
+
+                    <div class="msg-bubble">
+                        <div class="msg-info">
+                            <!-- <div class="msg-info-name">Delivery -- Jason Chow</div> -->
+                            <div class="msg-info-time">12:46</div>
+                        </div>
+
+                        <div class="msg-text">
+                            😄
+                        </div>
+                    </div>
+                </div>
+                <div class="msg left-msg">
+
+                    <!-- 對方icon 睇情況再整 -->
+                    <!-- <div
+                    class="msg-img"
+                    style="background-image: url()"
+                    ></div> -->
+
+                    <div class="msg-bubble">
+                        <div class="msg-info">
+                            <!-- <div class="msg-info-name">Customer</div> -->
+                            <div class="msg-info-time">12:45</div>
+                        </div>
+
+                        <div class="msg-text">
+                            😄
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <form class="msger-inputarea">
+                <input type="text" class="msger-input" placeholder="Enter your message...">
+                <button type="submit" class="msger-send-btn">Send</button>
+            </form>
+        </section>
+        <script src="js/chat.js"></script>
+
+        <!-- Wallet -------------------------------------------------->
+        <section class="wallet">
+            <header class="wallet-header">
+                <h2>Wallet</h2>
+
+                <div class="wallet-card">
+                    <div class="wallet-balance wcard">
+                        <div class="wnumber">$4461.50</div>
+                        <div class="wtext">Your Wallet Balance</div>
+                    </div>
+
+                    <div class="wallet-income wcard">
+                        <div class="wnumber">$2400.00</div>
+                        <div class="wtext">Your Earn</div>
+                    </div>
+                </div>
+
+            </header>
+            <table class="wallet-table">
+                <thead>
+                    <th>Date</th>
+                    <th>Content</th>
+                    <th>Type</th>
+                    <th>Total</th>
+                    <th>Balance</th>
+                </thead>
+                <tr>
+                    <td>2023-12-01</td>
+                    <td> 3*Ramen <br>
+                        1* Cola<br></td>
+                    <td>Delivery</td>
+                    <td>+ $800.00</td>
+                    <td>$4461.50</td>
+                </tr>
+                <tr>
+                    <td>2023-12-01</td>
+                    <td> 3*Ramen <br>
+                        1* Cola<br></td>
+                    <td>Delivery</td>
+                    <td>+ $800.00</td>
+                    <td>$3661.50</td>
+                </tr>
+                <tr>
+                    <td>2023-12-01</td>
+                    <td> 3*Ramen <br>
+                        1* Cola<br></td>
+                    <td>Delivery</td>
+                    <td>+ $800.00</td>
+                    <td>$2861.50</td>
+                </tr>
+            </table>
+        </section>
+    </div>
+</body>
+
+</html>

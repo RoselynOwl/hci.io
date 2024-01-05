@@ -1,0 +1,7 @@
+{
+    "users": [
+        { "username": "customer", "password": "password1", "type": "customer" },
+        { "username": "restaurant", "password": "password2", "type": "restaurant" },
+        { "username": "delivery", "password": "password3", "type": "delivery" }
+    ]
+}

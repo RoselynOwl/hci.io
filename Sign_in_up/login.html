@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <!-- jquery access -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="JS/login.js"></script>
+</head>
+<body>
+    <div id="logo" onclick="window.location.href='../index.html'">
+        Yummy<span id="logo-s">Restaurant</span>
+    </div>
+    <div class="wrapper">
+        <form id="loginForm">
+            <h1>Login</h1>
+            <div class="inputBox">
+                <input id="username" type="text" placeholder="Username/Email/Phone number" required>
+                <!-- icon(user) -->
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="inputBox">
+                <input id="password" type="password" placeholder="Password" required>
+                <!-- icon(lock) -->
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+
+            <div class="rememberForgot">
+                <label><input type="checkbox">Remember me</label>
+                <a href="#">Forgot password?</a>
+            </div>
+
+            <button type="button" class="submitBtn" onclick="login()">Login</button>
+
+            <div class="signUpLink">
+                <p>Don't have an Account?
+                    <a href="signUpSelection.html">Sign up</a>
+                </p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

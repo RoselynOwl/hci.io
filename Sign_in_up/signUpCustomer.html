@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Sign Up</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="css/signupcustomer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
+    <script type = "text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type = "text/javascript">
+        function backToSignUpPage() {
+            setTimeout(function () {
+                window.location.href = 'signUpSelection.html';
+            }, 100);
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <div class="container">
+            <header>Customer Sign Up</header>
+            <div class="progress-bar">
+                <div class="step">
+                    <p>Name</p>
+                    <div class="bullet">
+                        <span>1</span>
+                    </div>
+                    <div class="check fas fa-check"></div>
+                </div>
+                <div class="step">
+                    <p>Contact</p>
+                    <div class="bullet">
+                        <span>2</span>
+                    </div>
+                    <div class="check fas fa-check"></div>
+                </div>
+                <div class="step">
+                    <p>Birth</p>
+                    <div class="bullet">
+                        <span>3</span>
+                    </div>
+                    <div class="check fas fa-check"></div>
+                </div>
+                <div class="step">
+                    <p>Account</p>
+                    <div class="bullet">
+                        <span>4</span>
+                    </div>
+                    <div class="check fas fa-check"></div>
+                    </div>
+                </div>
+                <div class="form-outer">
+                    <form action="#">
+                        <div class="page slide-page">
+                            <div class="title">Your name:</div>
+                            <div class="field">
+                                <div class="label">First Name</div>
+                                <input type="text">
+                            </div>
+                            <div class="field">
+                                <div class="label">Middle Name (Selection)</div>
+                                <input type="text">
+                            </div>
+                            <div class="field">
+                                <div class="label">Last Name</div>
+                                <input type="text">
+                            </div>
+                                <div class="field btns">
+                                <button class="back" onclick="backToSignUpPage()">back</button>
+                                <button class="firstNext next">Next</button>
+                            </div>
+                        </div>
+
+                        <div class="page">
+                            <div class="title">Contact Info:</div>
+                            <div class="field">
+                                <div class="label">Email Address</div>
+                                <input type="text">
+                            </div>
+                            <div class="field">
+                                <div class="label">Confirm Email Address</div>
+                                <input type="text">
+                            </div>
+                            <div class="field">
+                                <div class="label">Phone Number</div>
+                                <input type="Number">
+                            </div>
+                            <div class="field btns">
+                                <button class="prev-1 prev">Previous</button>
+                                <button class="next-1 next">Next</button>
+                            </div>
+                        </div>
+
+                        <div class="page">
+                            <div class="title">Date of Birth:</div>
+                            <div class="field">
+                                <div class="label">Date</div>
+                                <input type="text">
+                            </div>
+                            <div class="field">
+                                <div class="label">Gender</div>
+                                <select>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="field btns">
+                                <button class="prev-2 prev">Previous</button>
+                                <button class="next-2 next">Next</button>
+                            </div>
+                        </div>
+
+                        <div class="page">
+                            <div class="title">Login Details:</div>
+                            <div class="field">
+                                <div class="label">Username</div>
+                                <input type="text">
+                            </div>
+                            <div class="field">
+                                <div class="label">Password</div>
+                                <input type="password" id="password" placeholder="Choose a password">
+    
+                                <div class="password-requirements">
+                                    <p><span id="symbol-requirement">✗</span> At least one special symbol (!@#$%^&*()_+{}[]:;<>,.?~\\-)</p>
+                                    <span id="lowercase-requirement">✗</span> At least one lowercase letter (a-z)
+                                    <p><span id="uppercase-requirement">✗</span> At least one uppercase letter (A-Z)</p>
+                                    <span id="length-requirement">✗</span> At least 8 characters
+                                </div>
+                            </div>
+
+                            <div id="password-strength">
+                                <div class="strength-box" id="weak">Weak</div>
+                                <div class="strength-box" id="medium">Medium</div>
+                                <div class="strength-box" id="strong">Strong</div>
+                            </div>
+
+                            <div class="field">
+                                <div class="label">Confirm Password</div>
+                                <input type="password">
+                            </div>
+                            <div class="field btns">
+                                <button class="prev-3 prev">Previous</button>
+                                <button class="submit">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <script src="js/signupcustomer.js"></script>
+        </body>
+
+        <div id="footer">
+            <link rel="stylesheet" href="../CSS/footer.css">
+            <script src="../JS/footer.js"></script>
+        </div>
+    </center>
+</html>

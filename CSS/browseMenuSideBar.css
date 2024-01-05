@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --body-color:#DDD;
+    --sidebar-color:rgb(241, 140, 32);
+    --primary-color:#DDD;
+    --primary-color-light:grey;
+    --toggle-color:#DDD;
+    --text-color:rgb(72, 62, 62);
+    --tran-02: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+}
+
+body{
+    height: 100vh;
+    background: var(--body-color);
+}
+
+.sidebar{
+    font-family: 'Open Sans', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    padding: 10px 14px;
+    background: var(--sidebar-color);
+    transition: var(--tran-04);
+    z-index: 100;
+}
+
+.sidebar header{
+    cursor: pointer;
+}
+
+.sidebar .close{
+    width: 88px;
+}
+
+.sidebar .text{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.sidebar .close .text{
+    opacity: 0;
+}
+
+.sidebar .logo{
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar li{
+    height: 50px;
+    /* background:rgb(189, 99, 99); */
+    margin-top: 10px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.menu li .part{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+    font-size: 20px;
+}
+
+.sidebar li .part,
+.sidebar li .text{
+    color: var(--text-color);
+    transition: var(--tran-03);
+}
+
+.sidebar li a:hover .part,
+.sidebar li a:hover .text{
+    color: var(--sidebar-color)
+}
+
+.sidebar li a{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.sidebar li a:hover{
+    background: var(--primary-color);
+    width: 100%;
+    transition: var(--tran-03);
+}
+
+.sidebar .menu-bar{
+    /* background: #DDD; */
+    height: calc(100% - 50px);
+    display: flex;
+    flex-direction: column; /*垂直排列*/
+    justify-content: space-between;
+}
+
+.nav-link {
+    border-radius: 8px;
+}
+
+/* =============search================ */
+.sidebar .search-box{
+    background: var(--primary-color);
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.search-box input{
+    padding-left: 10px;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    background: transparent;
+}
+
+.search-box input::placeholder{
+    color:rgba(128, 76, 9, 0.652);
+}
+/* =============search================ */
+
+
+
+/* =================Header===================== */
+.sidebar header{
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+.sidebar header .logo-text img{
+    width: 50px;
+    border-radius: 50px;
+}
+
+.sidebar header .logo-text{
+    display: flex;
+    align-items: center;
+}
+
+.sidebar header .toggle{
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    transform: translateY(-50%);
+    height: 25px;
+    width: 25px;
+    /* background: var(--primary-color); */
+    display: flex;
+    align-items: center; /*縱向置中*/
+    justify-content: center; /*橫向置中*/
+    border-radius: 50%;
+    color: var(--sidebar-color);
+    font-size: 18px;
+}
+
+.sidebar header .hearder-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.hearder-text .name{
+    font-weight: 600;
+}
+
+.hearder-text .subname{
+    justify-content: center;
+    margin-top: -2px;
+}
+/* =================Header===================== */
+
+/* .home{
+    position: relative;
+    left: 250px;
+    height: 100vh;
+    width: calc(100% - 250px);
+    background: #7981dc;
+} */
+
+/* =====================profile======================= */
+.sidebar .profile-details{
+    cursor: pointer;
+    position: relative;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 6px 0;
+    transition: all 0.5s ease;
+}
+
+.sidebar .profile-details .profile-content{
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .profile-details img, 
+.sidebar .profile-details ion-icon{
+    height: 52px;
+    width: 52px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin: 0 14px 0 0px;
+    background: transparent;
+    transition: all 0.5s ease;
+}
+
+.sidebar .profile-details .profile_name,
+.sidebar .profile-details .job{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.sidebar .profile-details .job{
+    font-size: 12px;
+}

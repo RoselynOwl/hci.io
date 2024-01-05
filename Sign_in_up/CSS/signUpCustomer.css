@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  background: url("bg.png"), -webkit-linear-gradient(bottom, #cd4823, #d6a365);
+}
+::selection{
+  color: #fff;
+  background: #d0612e;
+}
+.container{
+  min-height: 50vh;
+  width: 330px;
+  background: transparent;
+  text-align: center;
+  border-radius: 5px;
+  padding: 100px 35px 10px 35px;
+}
+.container header{
+  font-size: 35px;
+  font-weight: 600;
+  margin: 0 0 30px 0;
+  color: #4d1a07
+}
+.container .form-outer{
+  width: 100%;
+  overflow: hidden;
+}
+.container .form-outer form{
+  display: flex;
+  width: 400%;
+}
+.form-outer form .page{
+  width: 25%;
+  transition: margin-left 0.3s ease-in-out;
+}
+.form-outer form .page .title{
+  text-align: left;
+  font-size: 25px;
+  font-weight: 500;
+  color: #621e06
+}
+.form-outer form .page .field{
+  width: 330px;
+  height: 45px;
+  margin: 45px 0;
+  display: flex;
+  position: relative;
+}
+form .page .field .label{
+  position: absolute;
+  top: -30px;
+  font-weight: 500;
+  color: #621e06;
+}
+form .page .field input{
+  background-color: transparent;
+  height: 90%;
+  width: 100%;
+  border: 2px solid rgb(244, 176, 117);
+  border-radius: 20px;
+  padding-left: 15px;
+  font-size: 18px;
+}
+form .page .field select{
+  width: 100%;
+  padding-left: 10px;
+  font-size: 17px;
+  font-weight: 500;
+}
+form .page .field button{
+  width: 100%;
+  height: calc(100% + 5px);
+  border: none;
+  background: #893e20;
+  margin-top: -20px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.5s ease;
+}
+form .page .field button:hover{
+  background: #3a1304;
+}
+form .page .btns button{
+  margin-top: -20px!important;
+}
+form .page .btns button.prev{
+  margin-right: 3px;
+  font-size: 17px;
+}
+form .page .btns button.back{
+  margin-right: 3px;
+}
+form .page .btns button.next{
+  margin-left: 3px;
+}
+.container .progress-bar{
+  display: flex;
+  margin: 40px 0;
+  user-select: none;
+  color: #621e06;
+}
+.container .progress-bar .step{
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+.container .progress-bar .step p{
+  font-weight: 500;
+  font-size: 18px;
+  color: #3a1304;
+  margin-bottom: 8px;
+}
+.progress-bar .step .bullet{
+  height: 25px;
+  width: 25px;
+  border: 1px solid #3a1304;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+  transition: 0.2s;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 25px;
+}
+.progress-bar .step .bullet.active{
+  border-color: #7b4126;
+  background: #7b4126;
+}
+.progress-bar .step .bullet span{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.progress-bar .step .bullet.active span{
+  display: none;
+}
+.progress-bar .step .bullet:before,
+.progress-bar .step .bullet:after{
+  position: absolute;
+  content: '';
+  bottom: 11px;
+  right: -51px;
+  height: 2px;
+  width: 44px;
+  background: #621e06;
+}
+.progress-bar .step .bullet.active:after{
+  background: #893e20;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 0.3s linear forwards;
+}
+@keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
+}
+.progress-bar .step:last-child .bullet:before,
+.progress-bar .step:last-child .bullet:after{
+  display: none;
+}
+.progress-bar .step p.active{
+  color: #893e20;
+  transition: 0.2s linear;
+}
+.progress-bar .step .check{
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  font-size: 15px;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.progress-bar .step .check.active{
+  display: block;
+  color: #fff;
+}
+.field {
+  position: relative;
+}
+
+.password-strength-info {
+  display: none;
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  background-color: #fff;
+  color: #333;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  z-index: 2; 
+}
+
+.password-strength-info.active {
+  display: block;
+}
+
+
+
+#password-strength {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  position: relative; 
+  z-index: 1; 
+}
+
+.strength-box {
+  display: none;
+  width: 80px !important;
+  height: 10px;
+  border-radius: 20px;
+  position: relative;
+  z-index: 2; 
+}
+
+#weak {
+
+  background-color: red ; 
+  border-radius: 20px;
+}
+
+#medium {
+
+  background-color: yellow; 
+  border-radius: 20px;
+}
+
+#strong {
+
+  background-color: green ;
+  border-radius: 20px;
+}
+
+.password-requirements {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px; 
+}
+
+.password-requirements span {
+  margin-right: 10px; 
+  font-size: 20px; 
+}
+
+.password-requirements span.password-requirement-valid {
+  color: green; 
+}
+
+.password-requirements span.password-requirement-invalid {
+  color: red; 
+}
+.field {
+  position: relative;
+}
+
+.password-requirements {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none; 
+  width: 100%;
+  background-color: #fff;
+  color: #333;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.field:hover .password-requirements {
+  display: block; 
+}
+
+
+/* 灰色样式 */
+form .submit.disabled {
+  background-color: #cccccc79 !important; 
+  cursor: not-allowed; 
+}

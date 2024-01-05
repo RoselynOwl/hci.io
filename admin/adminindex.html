@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Admin Dashboard | Korsat X Parmaga</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="restaurant-outline"></ion-icon>
+                        </span>
+                        <span class="title">Yummy Restaurant</span>
+                    </a>
+                </li>
+
+                <li id="navDashboard">
+                    <a href="#" data-target="dashboardPage">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" data-target="orderPage">
+                        <span class="icon">
+                            <ion-icon name="document-outline"></ion-icon>
+                        </span>
+                        <span class="title">Order</span>
+                    </a>
+                </li>
+
+                <li id="navMenu">
+                    <a href="#"  data-target="menuPage">
+                        <span class="icon">
+                            <ion-icon name="fast-food-outline"></ion-icon>
+                        </span>
+                        <span class="title">Menu</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </span>
+                        <span class="title">Comments</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="help-outline"></ion-icon>
+                        </span>
+                        <span class="title">User Support</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="settings-outline"></ion-icon>
+                        </span>
+                        <span class="title">Settings</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="page" id="dashboardPage">
+                <div class="topbar">
+                    <div class="toggle">
+                        <ion-icon name="menu-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <!-- ======================= Cards ================== -->
+                <div class="cardBox">
+                    <div class="card">
+                        <div>
+                            <div class="numbers">2,904</div>
+                            <div class="cardName">Daily Views</div>
+                        </div>
+
+                        <div class="iconBx">
+                            <ion-icon name="eye-outline"></ion-icon>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div>
+                            <div class="numbers">80</div>
+                            <div class="cardName">Sales</div>
+                        </div>
+
+                        <div class="iconBx">
+                            <ion-icon name="cart-outline"></ion-icon>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div>
+                            <div class="numbers">284</div>
+                            <div class="cardName">Comments</div>
+                        </div>
+
+                        <div class="iconBx">
+                            <ion-icon name="chatbubbles-outline"></ion-icon>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div>
+                            <div class="numbers">$7,842</div>
+                            <div class="cardName">Earning</div>
+                        </div>
+
+                        <div class="iconBx">
+                            <ion-icon name="cash-outline"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================ Order Details List ================= -->
+                <div class="details">
+                    <div class="recentOrders">
+                        <div class="cardHeader">
+                            <h2>Recent Orders</h2>
+                            <a href="#" id="viewAllButton" class="btn" data-target="orderPage">View All</a>
+                        </div>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Order Time</td>
+                                    <td>Name</td>
+                                    <td>Price</td>
+                                    <td>Status</td>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>19:30</td>
+                                    <td>Burger*1<br><br>Sushi*2</td>
+                                    <td>$130</td>
+                                    <td><span class="status delivered">Delivered</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>19:30</td>
+                                    <td>Croissant*1<br><br>Pizza*1</td>
+                                    <td>$110</td>
+                                    <td><span class="status pending">Pending</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>19:30</td>
+                                    <td>Pasta*1</td>
+                                    <td>$120</td>
+                                    <td><span class="status inprogress">In Progress</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>19:30</td>
+                                    <td>Order</td>
+                                    <td>$620</td>
+                                    <td><span class="status inprogress">In Progress</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>19:30</td>
+                                    <td>Order</td>
+                                    <td>$1200</td>
+                                    <td><span class="status delivered">Delivered</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>19:30</td>
+                                    <td>Order</td>
+                                    <td>$110</td>
+                                    <td><span class="status pending">Pending</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>19:30</td>
+                                    <td>Order</td>
+                                    <td>$1200</td>
+                                    <td><span class="status inprogress">In Progress</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>19:30</td>
+                                    <td>Order</td>
+                                    <td>$620</td>
+                                    <td><span class="status inprogress">In Progress</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- ================= New Customers ================ -->
+                    <div class="recentCustomers">
+                        <div class="cardHeader">
+                            <h2>Popular food ranking</h2>
+                        </div>
+
+                        <table>
+                            <tr>
+                                <td width="60px">
+                                    <div class="imgBx"><img src="../Image/food/burger1.jpg" alt=""></div>
+                                </td>
+                                <td>
+                                    <h4>Burger <br> <span></span></h4>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td width="60px">
+                                    <div class="imgBx"><img src="../Image/food/pasta1.jpg" alt=""></div>
+                                </td>
+                                <td>
+                                    <h4>Pasta <br> <span></span></h4>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td width="60px">
+                                    <div class="imgBx"><img src="../Image/food/sushi1.jpg" alt=""></div>
+                                </td>
+                                <td>
+                                    <h4>Sushi <br> <span></span></h4>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td width="60px">
+                                    <div class="imgBx"><img src="../Image/food/burger1.jpg" alt=""></div>
+                                </td>
+                                <td>
+                                    <h4>Burger <br> <span></span></h4>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td width="60px">
+                                    <div class="imgBx"><img src="../Image/food/pasta1.jpg" alt=""></div>
+                                </td>
+                                <td>
+                                    <h4>Pasta <br> <span></span></h4>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td width="60px">
+                                    <div class="imgBx"><img src="../Image/food/sushi1.jpg" alt=""></div>
+                                </td>
+                                <td>
+                                    <h4>Sushi <br> <span></span></h4>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td width="60px">
+                                    <div class="imgBx"><img src="../Image/food/burger1.jpg" alt=""></div>
+                                </td>
+                                <td>
+                                    <h4>Burger <br> <span></span></h4>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td width="60px">
+                                    <div class="imgBx"><img src="../Image/food/pasta1.jpg" alt=""></div>
+                                </td>
+                                <td>
+                                    <h4>Pasta <br> <span></span></h4>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- Order page -->
+            <div class="page" id="orderPage">
+                <div class="topbar">
+                    <div class="toggle">
+                        <ion-icon name="menu-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="details" style="grid-template-columns: 1fr;">
+                    <div class="recentOrders">
+                        <div class="cardHeader">
+                            <h2>Orders</h2>
+                        </div>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Order Time</td>
+                                    <td>Name</td>
+                                    <td>Price</td>
+                                    <td>Status</td>
+                                </tr>
+                            </thead>
+
+                            <tbody  id="ordersContainer">
+                                <!-- InnerHTML By order.js -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="orderDetailsModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-modal">&times;</span>
+                        <h2>Order Details</h2>
+                        <p id="orderDetailsContent"></p>
+                        <div class="button-container">
+                            <button id="changeStatusButton" type="submit" class="modal-button" style="display: none;">Change Status</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- menu page -->
+            <div class="page" id="menuPage">
+                <div class="topbar">
+                    <div class="toggle">
+                        <ion-icon name="menu-outline"></ion-icon>
+                    </div>
+                    <button id="addNewItemButton">Add New Item</button>
+                </div>
+
+
+                  
+                <div class="menu-card">
+
+                </div>
+
+                        <!-- Menu edit modal -->
+                <div id="editModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-modal" onclick="closeModal()">&times;</span>
+                        <h2>Edit Menu Item</h2>
+                        <!-- 编辑表单 -->
+                        <form id="editForm">
+
+                            <div class="form-group">
+                                <label for="editName">Item Name</label>
+                                <input type="text" id="editName" name="editName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="editDescription">Item Description</label>
+                                <textarea id="editDescription" name="editDescription" rows="4" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="editPrice">Item Price</label>
+                                <input type="number" id="editPrice" name="editPrice" step="0.01" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="editImage">Item Image</label>
+                                <input type="file" id="editImage" name="editImage" accept="image/*">
+                            </div>
+                            <div class="button-container">
+                                <button type="submit" class="modal-button">Save Changes</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Add new item modal -->
+                <div id="addNewItemModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-modal" onclick="closeAddModal()">&times;</span>
+                        <h2>Add New Item</h2>
+                        <form id="addNewItemForm">
+                            <input type="text" id="newItemName" placeholder="Name">
+                            <input type="text" id="newItemDescription" placeholder="Description">
+                            <input type="text" id="newItemPrice" placeholder="Price">
+                            <input type="file" id="newItemImage" accept="image/*">
+                            <div class="button-container">
+                                <button type="submit" class="modal-button">Add Item</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+
+
+      
+    <!-- =========== Scripts =========  -->
+    <script src="js/main.js"></script>
+    <script src="js/order.js"></script>
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

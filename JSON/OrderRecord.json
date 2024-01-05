@@ -1,0 +1,44 @@
+[
+  {
+    "customer": "Chan Tai Man",
+    "date": "2023-11-29",
+    "storeName": "香港細山青衣路20號",
+    "price": 64.99
+  },
+  {
+    "customer": "Jackson Chan",
+    "date": "2023-11-22",
+    "storeName": "香港細山青衣路20號",
+    "price": 3000.99
+  },
+  {
+    "customer": "Eason Chan",
+    "date": "2023-11-15",
+    "storeName": "Mayfair Garden",
+    "price": 210.40
+  },
+  {
+    "customer": "Edison Chan",
+    "date": "2023-11-11",
+    "storeName": "Mayfair Garden",
+    "price": 149.70
+  },
+  {
+    "customer": "Anson Chan",
+    "date": "2023-11-08",
+    "storeName": "Mayfair Garden",
+    "price": 399.99
+  },
+  {
+    "customer": "Jason Chan",
+    "date": "2023-11-05",
+    "storeName": "Mayfair Garden",
+    "price": 399.99
+  },
+  {
+    "customer": "Johnson Chan",
+    "date": "2023-11-03",
+    "storeName": "Mayfair Garden",
+    "price": 399.99
+  }
+]

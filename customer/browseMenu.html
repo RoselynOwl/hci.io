@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ordering</title>
+    <link rel="stylesheet" href="../CSS/browseMenuSideBar.css">
+    <link rel="stylesheet" href="../css/browseMenu.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+        $(document).ready(function(){
+            //cart
+            $(".cart-container").css("display", "none");
+
+            //$(".main-highlight").css("display", "none");
+            //$(".main-menus").css("display", "none");
+            
+            $("#cartListShow").click(function() {
+                $(".cart-container").css("display", "block");
+                $(".main-highlight").css("display", "none");
+                $(".main-menus").css("display", "none");
+            });
+            
+            $("#cartListClose").click(function() {
+                $(".cart-container").css("display", "none");
+                $(".main-highlight").css("display", "block");
+                $(".main-menus").css("display", "block");
+            });
+
+            //menu cat
+            $("#CallMenus").click(function(){
+                $("#breadTit").css("display", "block");
+                $("#bread").css("display", "flex");
+                
+                $("#burgerTit").css("display", "block");
+                $("#burger").css("display", "flex");
+
+                $("#pizzaTit").css("display", "block");
+                $("#pizza").css("display", "flex");
+                
+                $("#drinksTit").css("display", "block");
+                $("#drinks").css("display", "flex");
+                
+                $("#setTit").css("display", "block");
+                $("#set").css("display", "flex");
+            });
+
+            $("#Cburger").click(function(){
+                $("#breadTit").css("display", "none");
+                $("#bread").css("display", "none");
+                
+                $("#burgerTit").css("display", "block");
+                $("#burger").css("display", "flex");
+
+                $("#pizzaTit").css("display", "none");
+                $("#pizza").css("display", "none");
+                
+                $("#drinksTit").css("display", "none");
+                $("#drinks").css("display", "none");
+                
+                $("#setTit").css("display", "none");
+                $("#set").css("display", "none");
+            });
+
+            $("#Cpizza").click(function(){
+                $("#breadTit").css("display", "none");
+                $("#bread").css("display", "none");
+                
+                $("#burgerTit").css("display", "none");
+                $("#burger").css("display", "none");
+
+                $("#pizzaTit").css("display", "block");
+                $("#pizza").css("display", "flex");
+                
+                $("#drinksTit").css("display", "none");
+                $("#drinks").css("display", "none");
+                
+                $("#setTit").css("display", "none");
+                $("#set").css("display", "none");
+            });
+
+            $("#Cdrinks").click(function(){
+                $("#breadTit").css("display", "none");
+                $("#bread").css("display", "none");
+                
+                $("#burgerTit").css("display", "none");
+                $("#burger").css("display", "none");
+
+                $("#pizzaTit").css("display", "none");
+                $("#pizza").css("display", "none");
+                
+                $("#drinksTit").css("display", "block");
+                $("#drinks").css("display", "flex");
+                
+                $("#setTit").css("display", "none");
+                $("#set").css("display", "none");
+            });
+
+            $("#Cset").click(function(){
+                $("#breadTit").css("display", "none");
+                $("#bread").css("display", "none");
+                
+                $("#burgerTit").css("display", "none");
+                $("#burger").css("display", "none");
+
+                $("#pizzaTit").css("display", "none");
+                $("#pizza").css("display", "none");
+                
+                $("#drinksTit").css("display", "none");
+                $("#drinks").css("display", "none");
+                
+                $("#setTit").css("display", "block");
+                $("#set").css("display", "flex");
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <nav class="sidebar">
+        <header onclick="window.location.href='../index.html'">
+            <div class="logo-text">
+                <span class="logo">
+                    <img src="../image/logo.png" alt="logo">
+                </span>
+
+                <div class="text header-text">
+                    <span class="name">Yummy Restaurant</span>
+                    <!-- <span class="subname">Menu</span> -->
+                </div>
+            </div>
+            <!-- <i class='bx bx-menu toggle'></i> -->
+        </header>
+
+<!-- =============================sidebar=============================== -->
+        <div class="menu-bar">
+
+            <div class="menu">
+                <ul>
+                    <li class="search-box">
+                        <input type="search" placeholder="Search for cuisine">
+                    </li>
+                </ul>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bxs-dashboard part' ></i>
+                            <span class="text nav-text">Dash</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bxs-dashboard part' ></i>
+                            <span class="text nav-text">Dash</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bxs-dashboard part' ></i>
+                            <span class="text nav-text">Dash</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bxs-dashboard part' ></i>
+                            <span class="text nav-text">Dash</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bxs-dashboard part' ></i>
+                            <span class="text nav-text">Dash</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bxs-dashboard part' ></i>
+                            <span class="text nav-text">Dash</span>
+                        </a>
+                    </li>
+                    <!-- <li class="nav-mode">
+                        <a href="#">
+                            <i class='bx bxs-dashboard part' ></i>
+                            <span class="text nav-text">Dash</span>
+                        </a>
+                    </li> -->
+                </ul>
+            </div>
+
+            <div>
+                <div class="profile-details">
+                    <div class="profile-content">
+                        <ion-icon name="person-outline"></ion-icon>
+                      <!-- <img src="image/profile.jpg" alt="profileImg"> -->
+                    </div>
+                    <div class="name-job">
+                        <div class="profile_name">Public User</div>
+                        <div class="job">login for more funtions</div>
+                    </div>
+                    <!-- <i class='bx bx-log-out' ></i> -->
+                  </div>
+                  
+                <div class="bottom-logout">
+                    <li>
+                        <a href="../Sign_in_up/login.html">
+                            <i class='bx bx-log-out-circle' ></i>
+                            <span class="text nav-text">Logout</span>
+                        </a>
+                    </li>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+    
+<!-- =====================Right part============================== -->
+
+    <div class="main">
+        <div class="main-navbar">
+
+            <!-- will be adding filter here -->
+
+            <div class="profile">
+                <a href="#" class="cart-list-show" >
+                    <ion-icon name="cart" id="cartListShow"></ion-icon>
+                </a>
+                <a href="#" class="favourite">
+                    <ion-icon name="heart"></ion-icon>
+                </a>
+            </div>
+        </div>
+
+        <!-- cart list -->
+        <div class="cart-container" id="cardListContainer">
+            <div class="cart-list cart-page" id="cartList"> 
+                <!-- cart-list 内容 -->
+                <table id="cart-table">
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Subtotal</th>
+                    </tr>
+
+                </table>
+
+                <div class="total-price">
+                    <table>
+                        <tr>
+                            <td id="discount">Discount</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td id="total">Total</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+                
+            </div>
+            <span class="cart-list-close" id="cartListClose">X</span>
+        </div>
+        
+<!-- ================Recommendation========================= -->
+        <div class="main-highlight" id="recommendation">
+            <div class="main-header">
+                <h2 class="main-title">Recommendation</h2>
+                <div class="main-arrow">
+                    <ion-icon class="back" name="caret-back"></ion-icon>
+                    <ion-icon class="next" name="caret-forward-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="highlight-wrapper">
+                <div class="highlight-card">
+                    <img src="../image/food/bibimbap1.jpg" alt="" class="highlight-img">
+                    <div class="highlight-desc">
+                        <h4>BiBimBap</h4>
+                        <p>$2200</p>
+                    </div>
+                </div>
+                <div class="highlight-card">
+                    <img src="../Image/food/bibimbap1.jpg" alt="" class="highlight-img">
+                    <div class="highlight-desc">
+                        <h4>BiBimBap</h4>
+                        <p>$2200</p>
+                    </div>
+                </div>
+                <div class="highlight-card">
+                    <img src="../Image/food/bibimbap1.jpg" alt="" class="highlight-img">
+                    <div class="highlight-desc">
+                        <h4>BiBimBap</h4>
+                        <p>$2200</p>
+                    </div>
+                </div>
+                <div class="highlight-card">
+                    <img src="../Image/food/bibimbap1.jpg" alt="" class="highlight-img">
+                    <div class="highlight-desc">
+                        <h4>BiBimBap</h4>
+                        <p>$2200</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+<!-- =======================Menu=================================== -->
+        <div class="main-menus" id="Menu">
+            <div class="main-filter">
+                <div>
+                    <h2 class="main-title">Menu <br>Category</h2>
+                    <div class="main-arrow">
+                        <ion-icon class="back-menus" name="caret-back"></ion-icon>
+                        <ion-icon class="next-menus" name="caret-forward-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="filter-wrapper">
+                    <div class="filter-card" id="CallMenus">
+                        <div class="filter-icon">
+                            <ion-icon name="restaurant-outline"></ion-icon>
+                        </div>
+                        <p>All Menus</p>
+                    </div>
+                    <div class="filter-card" id="Cburger">
+                        <div class="filter-icon">
+                            <ion-icon name="fast-food-outline"></ion-icon>
+                        </div>
+                        <p>Burger</p>
+                    </div>
+                    <div class="filter-card" id="Cpizza">
+                        <div class="filter-icon">
+                            <ion-icon name="pizza-outline"></ion-icon>
+                        </div>
+                        <p>Pizza</p>
+                    </div>
+                    <div class="filter-card" id="Cdrinks">
+                        <div class="filter-icon">
+                            <ion-icon name="wine-outline"></ion-icon>
+                        </div>
+                        <p>Drinks</p>
+                    </div>
+                    <!-- <div class="filter-card" id="Cnoodle">
+                        <div class="filter-icon">
+                            <box-icon name='bowl-hot' ></box-icon>
+                        </div>
+                        <p>Noodle</p>
+                    </div>
+                    <div class="filter-card" id="Crice">
+                        <div class="filter-icon">
+                            <box-icon name='bowl-rice' ></box-icon>
+                        </div>
+                        <p>Rice</p>
+                    </div> -->
+                    <div class="filter-card" id="Cset">
+                        <div class="filter-icon">
+                            <img src="../Image/icon/food.png" alt="">
+                        </div>
+                        <p>Set</p>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="divider">
+
+            <div class="main-detail">
+                <h2 class="main-title" value="add to cart"></h2>main-title</h2>
+
+                <!-- ----------------bread--------------- -->
+                <h2 id="breadTit">Bread</h2>   
+                <div class="detail-wrapper" id="bread">
+                    <div class="detail-card">
+                        <img class="detail-img" src="../Image/food/croissant.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Croissant</h4>
+                                <p class="detail-sub">crispy & soften</p>
+                                <p class="price">$800</p>
+                                <input type="button" value="add to cart" onclick="updateCart(this)">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-card">
+                        <img class="detail-img" src="../Image/food/croissant.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Croissant</h4>
+                                <p class="detail-sub">crispy & soften</p>
+                                <p class="price">$800</p>
+                                <input type="button" value="add to cart" onclick="updateCart(this)">
+                            </div>
+                            <ion-icon class="detail-favorites" name="heart-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <img class="detail-img" src="../Image/food/croissant.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Croissant</h4>
+                                <p class="detail-sub">crispy & soften</p>
+                                <p class="price">$800</p>
+                                <input type="button" value="add to cart" onclick="updateCart(this)">
+                            </div>
+                            <ion-icon class="detail-favorites" name="heart-outline"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ----------------Burger-------------- -->
+                <h2 id="burgerTit">Burger</h2>   
+                <div class="detail-wrapper" id="burger">
+                    <div class="detail-card">
+                        <img class="detail-img" src="../Image/food/burger2.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Chilli Burger</h4>
+                                <p class="detail-sub">God Damn Spicy</p>
+                                <p class="price">$800</p>
+                                <input type="button" value="add to cart" onclick="updateCart(this)">
+                            </div>
+                            <ion-icon class="detail-favorites" name="heart-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <img class="detail-img" src="../Image/food/burger3.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Double Cheese</h4>
+                                <p class="detail-sub">God Damn Spicy</p>
+                                <p class="price">$900</p>
+                                <input type="button" value="add to cart" onclick="updateCart(this)">
+                            </div>
+                            <ion-icon class="detail-favorites" name="heart-outline"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ----------------pizza-------------- -->
+                <h2 id="pizzaTit">Pizza</h2>   
+                <div class="detail-wrapper" id="pizza">
+                    <div class="detail-card">
+                        <img class="detail-img" src="../Image/food/pizza2.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Pepperoni</h4>
+                                <p class="detail-sub">Basic Pizza</p>
+                                <p class="price">$1600</p>
+                                <input type="button" value="add to cart" onclick="updateCart(this)">
+                            </div>
+                            <ion-icon class="detail-favorites" name="heart-outline"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+
+            <!-- ----------------drinks--------------- -->
+                <h2 id="drinksTit">Drinks</h2>   
+                <div class="detail-wrapper" id="drinks">    
+                    <div class="detail-card">
+                        <img class="detail-img" src="../Image/food/baverage/coffee.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Coffee</h4>
+                                <p class="detail-sub">Creamy Smoothy</p>
+                                <p class="price">$800</p>
+                                <input type="button" value="add to cart" onclick="updateCart(this)">
+                            </div>
+                            <ion-icon class="detail-favorites" name="heart-outline"></ion-icon>
+                        </div>
+                    </div>
+
+                    <div class="detail-card">
+                        <img class="detail-img" src="../Image/food/baverage/limeSoda.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Lime Soda</h4>
+                                <p class="detail-sub">Get Fresh</p>
+                                <p class="price">$800</p>
+                                <input type="button" value="add to cart" onclick="updateCart(this)">
+                            </div>
+                            <ion-icon class="detail-favorites" name="heart-outline"></ion-icon>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-card">
+                        <img class="detail-img" src="../Image/food/baverage/orangeJuice.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Orange Juice</h4>
+                                <p class="detail-sub">Children's Love</p>
+                                <p class="price">$800</p>
+                                <input type="button" value="add to cart" onclick="updateCart(this)">
+                            </div>
+                            <ion-icon class="detail-favorites" name="heart-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <img class="detail-img" src="../Image/food/baverage/beer.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Beer</h4>
+                                <p class="detail-sub">Relaxing with Alcohol</p>
+                                <p class="price">$800</p>
+                                <input type="button" value="add to cart" onclick="updateCart(this)">
+                            </div>
+                            <ion-icon class="detail-favorites" name="heart-outline"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ----------------set-------------- -->
+                <h2 id="setTit">Set</h2>   
+                <div class="detail-wrapper" id="set">
+                    <div class="detail-card">
+                        <img class="detail-img" src="../Image/food/set/burgerColaFrieds.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Burger Set</h4>
+                                <p class="detail-sub">Classical Set with Potatos and Cola</p>
+                                <p class="price">$3200</p>
+                                <input type="button" value="add to cart" onclick="updateCart(this)">
+                            </div>
+                            <ion-icon class="detail-favorites" name="heart-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <img class="detail-img" src="../Image/food/set/coffeeWithChocoMacaron.jpg">
+                        <div class="detail-desc">
+                            <div class="detail-name">
+                                <h4>Coffee Set</h4>
+                                <p class="detail-sub">Chocolate Macaron with Hot Latte</p>
+                                <p class="price">$3200</p>
+                                <input type="button" value="add to cart" onclick="updateCart(this)">
+                            </div>
+                            <ion-icon class="detail-favorites" name="heart-outline"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- <section class="home">
+    </section> -->
+ 
+
+    <script src="../JS/cartCal.js"></script>
+</body>
+
+</html>
